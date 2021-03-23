@@ -1,0 +1,70 @@
+.details {
+    width: 100vw;
+    margin-top: -80px;
+    &--intro {
+        position: relative;
+        width: 100%;
+        // background-image: url(/intersection-1.svg);
+        background-size: cover;
+
+        &__bg {
+            position: absolute;
+            top: 0;
+            left: 0vw;
+            width: 100vw;
+            z-index: 10;
+        }
+
+        &--heading {
+            grid-column: 6/11;
+            position: relative;
+            z-index: 20;
+            margin-top: 10vw;
+        }
+
+        &--title {
+            font-family: 'Gotham', sans-serif;
+            font-weight: 600;
+            width: 65%;
+        }
+        &--subtitle {
+            font-family: 'Gotham', sans-serif;
+            font-weight: 400;
+        }
+    }
+    &--body {
+        position: relative;
+        grid-column: 1/13;
+
+
+        &__right {
+            position: relative;
+
+            #molecule1 {
+                position: absolute;
+                z-index: 20;
+                right: 0;
+                transform-origin: center left;
+                transform: translate(75%, -4.5%) scale(1.4) rotate(-1deg);
+            }
+
+            #girlJumping {
+                position: absolute;
+                top: 6vw;
+                right: 10%;
+                z-index: 5;
+                width: 70%;
+                transform-origin: center right;
+
+                &--arm {
+                    position: absolute;
+                    z-index: 21;
+                    width: 70%;
+                    top: 6vw;
+                    right: 10%;
+                    transform-origin: center right;
+                }
+            }
+        }
+    }
+}

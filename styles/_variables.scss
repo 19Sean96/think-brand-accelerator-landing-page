@@ -1,0 +1,128 @@
+$black: #2E2E2E;
+$white: #E3E3E3;
+$primary: #EC008C;
+$secondary: #630460;
+
+// COLOR TINS BASED OFF MAIN COLORS ABOVE - FOR SHADOWING, GRADIENTS, ETC.
+$white-foreground-dark: #CBCBCB;
+$white-foreground-light: #F2F2F2;
+$white-shadow-light: #FFFFFF;
+$white-shadow-dark: #C0C0C0;
+
+$primary-foreground-dark: #D4007E;
+$primary-foreground-light: #FD0096;
+$primary-shadow-light: #FF00C0;
+$primary-shadow-dark: #950058;
+
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-Thin.otf");
+	font-style: normal;
+	font-weight: 100;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-ThinItalic.otf");
+	font-style: italic;
+	font-weight: 100;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-XLight.otf");
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-XLightItalic.otf");
+	font-style: italic;
+	font-weight: 200;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-Light.otf");
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-LightItalic.otf");
+	font-style: italic;
+	font-weight: 300;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-Book.otf");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-BookItalic.otf");
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-Medium.otf");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-MediumItalic.otf");
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-Bold_0.otf");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-BoldItalic.otf");
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-Ultra.otf");
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-UltraItalic.otf");
+	font-style: italic;
+	font-weight: 800;
+	font-display: swap;
+}
