@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Header from '../components/Sections/Header'
 import Landing from '../components/Sections/Landing'
 import Details from '../components/Sections/Details'
+import Summary from '../components/Sections/Summary'
+import ContactForm from '../components/Sections/ContactForm'
+
 export default function Home() {
   return (
     <div>
@@ -14,6 +17,8 @@ export default function Home() {
         <Header />
         <Landing />
         <Details />
+        <Summary />
+        <ContactForm />
       </main>
 
 

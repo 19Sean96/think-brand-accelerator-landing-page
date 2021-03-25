@@ -1,18 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2456.078" height="2296.879" viewBox="0 0 2456.078 2296.879">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="580.25" height="1603.967" viewBox="0 0 580.25 1603.967">
   <defs>
     <clipPath id="clip-path">
-      <rect x="387" y="496" width="2456.078" height="2296.879" fill="none"/>
+      <rect x="422" y="609" width="580.25" height="1603.967" fill="none"/>
     </clipPath>
-    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.659" gradientTransform="translate(-0.01 0.01) rotate(-1.179)" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#ec008c"/>
-      <stop offset="0.611" stop-color="#d30184"/>
-      <stop offset="1" stop-color="#630460" stop-opacity="0.478"/>
-    </radialGradient>
   </defs>
-  <g id="molecule-1" transform="translate(-387 -496)" clip-path="url(#clip-path)" style="isolation: isolate">
-    <g id="molecule-1-2" data-name="molecule-1" transform="translate(-869.5 -530)">
-      <path id="Path_681" data-name="Path 681" d="M2136.01,784.225a323.677,323.677,0,0,0-133.5,28.728L1873.04,588.785a324.975,324.975,0,1,0-513.461-296.248H1101.159A324.976,324.976,0,1,0,588.022,588.784L458.552,812.953a324.975,324.975,0,1,0,0,592.5l129.47,224.233a324.976,324.976,0,1,0,513.461,296.183h258.745a324.975,324.975,0,1,0,513.461-296.183l129.47-224.233a324.975,324.975,0,1,0,133.5-621.223Zm-319.191,812.894a324.975,324.975,0,0,0-456.915,263.75H1101.159a324.976,324.976,0,0,0-456.916-263.75L514.838,1372.951a324.976,324.976,0,0,0,0-527.5L644.243,621.282a324.976,324.976,0,0,0,456.916-263.75H1359.9a324.976,324.976,0,0,0,456.916,263.75L1946.225,845.45a324.975,324.975,0,0,0,0,527.5Z" transform="matrix(0.574, 0.819, -0.819, 0.574, 2686.575, 530.018)" fill="url(#radial-gradient)"/>
-      <ellipse id="Ellipse_30" data-name="Ellipse 30" cx="325" cy="326.5" rx="325" ry="326.5" transform="translate(1255.999 1928)" fill="#ec008c"/>
+  <g id="molecule-1" transform="translate(-422 -609)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="molecule-1-2" data-name="molecule-1" transform="translate(-927.609 -127.463) rotate(-7)">
+      <path id="Path_681" data-name="Path 681" d="M1588.324,583.149a240.683,240.683,0,0,0-99.269,21.362l-96.273-166.689a241.648,241.648,0,1,0-381.8-220.287H818.82A241.648,241.648,0,1,0,437.257,437.822L340.985,604.511a241.648,241.648,0,1,0,0,440.573l96.273,166.737a241.648,241.648,0,1,0,381.8,220.238h192.4a241.648,241.648,0,1,0,381.8-220.238l96.273-166.737a241.648,241.648,0,1,0,99.269-461.935Zm-237.347,604.459a241.648,241.648,0,0,0-339.757,196.122H818.82a241.648,241.648,0,0,0-339.757-196.122l-96.224-166.689a241.648,241.648,0,0,0,0-392.244l96.224-166.689A241.648,241.648,0,0,0,818.82,265.865h192.4a241.648,241.648,0,0,0,339.758,196.122L1447.2,628.676a241.648,241.648,0,0,0,0,392.243Z" transform="matrix(0.574, 0.819, -0.819, 0.574, 2220.657, 530)" fill="#ec008c"/>
     </g>
   </g>
 </svg>

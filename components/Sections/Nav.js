@@ -34,6 +34,10 @@ const GlobalMenu = styled.div`
     transition: .22s width ease-in,
                 .11s opacity .11s ease-out;
   }
+
+  #navGlobalClose {
+	  display: ${props => props.isOpen ? 'block' : 'none'}
+  }
 `
 
 const GlobalNav = (props) => {
