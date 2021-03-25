@@ -61,6 +61,7 @@
             overflow: hidden;
 
             position: relative;
+            box-shadow: 0 2.9rem 5.2rem rgba(0,0,0,.16);
 
             &::after {
                 content: '';
@@ -69,7 +70,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: radial-gradient(circle at center, rgba($primary-foreground-light, .73) 0, $primary-foreground-dark 120%);
+                background-image: radial-gradient(circle at center, rgba($primary-foreground-light, .73) 0, $secondary 110%);
             }
         }
         &--caption {

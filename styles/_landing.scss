@@ -31,9 +31,16 @@
     }
 
     @media screen and (max-width: 1325px) {
-      margin-top: 4vh;
-      grid-column: 2/10;
+      margin-top: 1vh;
+      grid-column: 2/9;
       height: 27vh;
+
+      &--title {
+          width: 70%;
+      }
+      &--subtitle {
+          width: 90%;
+      }
     }
     @media screen and (max-width: 950px) {
       grid-column: 2/12;
@@ -140,13 +147,25 @@
   &--image {
     position: absolute;
     top: 5%;
-    left: 50%;
+    right: 50%;
     width: 40vw;
     min-width: 750px;
-    transform: translate(-25%, -15%);
+    transform: translate(75%, -15%);
     z-index: 1;
     img {
       width: 100%;
+    }
+
+    @media screen and (max-width: 1325px) {
+        min-width: 650px;
+        top:20%;
+        right: 0%;
+        transform: translate(0%, -15%);
+        overflow: hidden;
+        img {
+            position: relative;
+            transform: translate(10%, 0);
+        }
     }
   }
 

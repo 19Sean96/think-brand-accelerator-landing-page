@@ -1,26 +1,108 @@
 .contact-form {
-    position: relative;
-    z-index: 12;
-    width: 100vw;
-    min-height: 50vh;
-    background-image: linear-gradient(145deg, $primary 0, $secondary 110%);
-    clip-path: polygon(0 0, 100% 22.5%, 100% 100%, 0% 100%);
+	position: relative;
+	z-index: 12;
+	width: 100vw;
+	min-height: 50vh;
+	background-image: linear-gradient(5deg, $primary 0, $secondary 96%);
+	clip-path: polygon(0 0, 100% 22rem, 100% 100%, 0% 100%);
+    padding-bottom: 22vw;
+    padding-top: 10rem;
 
-    &--content {
-        margin-top: 150px;
-        grid-column: 3/11;
-    }
+	&--content {
+		margin-top: 150px;
+		grid-column: 3/11;
+	}
 
-    &--title {
-        font-family: 'Gotham', sans-serif;
-        font-weight: 600;
-        color: $primary;
-        font-size: 4.395rem;
-    }
-    &--subtitle {
-        color: $white;
-        font-size: 3.516rem;
-        font-weight: 500;
+	&--title {
+		font-family: "Gotham", sans-serif;
+		font-weight: 600;
+		color: $primary;
+		font-size: 4.395rem;
+        margin-bottom: 0;
+        padding-left: 1.8rem;
+	}
+	&--subtitle {
+		color: $white;
+		font-size: 3.516rem;
+		font-weight: 500;
+        margin: 0 0 3.2rem 0;
+        padding-left: 1.8rem;
+	}
 
-    }
+	.form {
+        position: relative;
+		display: flex;
+		flex-wrap: wrap;
+        max-width: 100%;
+
+		&__wrapper {
+			background-color: $black;
+			background-image: linear-gradient(-35deg, #292929, #313131);
+			border-radius: 3rem;
+			padding: 7.5rem 5rem 2.5rem;
+			display: flex;
+			justify-content: space-between;
+            max-width: 100%;
+		}
+
+		.half {
+			width: 45%;
+            max-width: 100%;
+		}
+		.full {
+			width: 80%;
+            max-width: 100%;
+		}
+
+		&--input {
+			font-size: 22.5px;
+			padding: 20px 40px;
+			border-radius: 20px;
+			box-shadow: 0 -14px 26px rgba(0, 0, 0, 0.11);
+			border: none;
+			font-family: "Gotham";
+			font-weight: 600;
+            width: 100%;
+
+			&__wrapper {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				font-family: "Gotham";
+				font-weight: 700;
+				margin: 32.5px 20px;
+
+				label {
+					color: $primary;
+					font-size: 28.14px;
+					margin: 0 0 15px 10px;
+				}
+			}
+		}
+
+        &--submit {
+            font-size: 2.813rem;
+            font-family: 'Gotham';
+            font-weight: 500;
+            border-radius: 7px;
+            border: none;
+            padding: 1.75rem 4.25rem;
+            background-color: $secondary;
+            background-image: linear-gradient(135deg, $primary, $secondary);
+            margin-left: auto;
+            &__wrapper {
+                // background-color: $secondary;
+                margin: 32.5px 20px;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        #explanation {
+            min-width: 99.9%;
+            max-width: 100%;
+            min-height: 225px;
+            max-height: 350px;
+        }
+	}
 }

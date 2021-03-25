@@ -31,6 +31,15 @@
       font-family: "Gotham", sans-serif;
       font-weight: 400;
     }
+
+    @media screen and (max-width: 1920px) {
+        &--title {
+            font-size: 2.9vw;
+        }
+        &--subtitle {
+            font-size: 2.3vw;
+        }
+    }
   }
   &--body {
     margin-top: 120px;
@@ -44,7 +53,7 @@
       width: 45vw;
       top: 3vw;
       height: auto;
-      z-index: 11;
+      z-index: 13;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -92,6 +101,8 @@
             position: absolute;
             top: 50%;
             left: 50%;
+            height: 45%;
+            max-width: 55%;
             transform: translate(-50%, -50%);
           }
         }
@@ -102,6 +113,16 @@
           font-size: 1.9rem;
           font-weight: bold;
           color: $secondary;
+          text-align: center;
+        }
+
+        @media screen and (max-width: 1550px) {
+            width: 14.5vw;
+
+            &--btn {
+                width: 11.3vw;
+                height: 11.3vw;
+            }
         }
       }
       #socialMedia {
@@ -133,6 +154,17 @@
         top: 100%;
         left: 50%;
         transform: translate(-50%, -100%);
+      }
+
+      @media screen and (max-width: 1300px) {
+          height: 55vw;
+          width: 47.82vw;
+          margin-left: 5vw;
+
+          h2 {
+              font-size: 2.9vw;
+          }
+
       }
     }
 
@@ -188,6 +220,20 @@
           top: 1.4vw;
           right: 17vw;
           transform-origin: center right;
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
+
+        #molecule1 {
+            width: 30.5vw;
+        }
+        #girlJumping {
+            right: 11vw;
+
+            &--arm {
+                right: 11vw;
+            }
         }
       }
     }

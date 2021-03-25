@@ -4,7 +4,7 @@ import Landing from '../components/Sections/Landing'
 import Details from '../components/Sections/Details'
 import Summary from '../components/Sections/Summary'
 import ContactForm from '../components/Sections/ContactForm'
-
+import Footer from '../components/Sections/Footer'
 export default function Home() {
   return (
     <div>
@@ -19,6 +19,7 @@ export default function Home() {
         <Details />
         <Summary />
         <ContactForm />
+        <Footer />
       </main>
 
 
