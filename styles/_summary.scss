@@ -1,0 +1,96 @@
+.summary {
+    position: relative;
+    margin-top: 120px;
+
+    &--person {
+        position: relative;
+        img {
+            position: absolute;
+            top: -50px;
+            width: 48vw;
+            min-width: 750px;
+            max-width: 900px;
+            // max-width: 950px;
+            transform: translateX(-20%);
+        }
+
+        #fullPicture {
+            z-index: 11;
+        }
+        #justBoots {
+            z-index: 13;
+        }
+    }
+    &--content {
+        grid-column: 4/12;
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        z-index: 14;
+
+    }
+
+    &--title {
+        color: $secondary;
+        width: 67%;
+        font-weight: 600;
+        font-family: 'Gotham', sans-serif;
+    }
+
+    &--video {
+
+        &--play-btn {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background-color: transparent;
+            border: none;
+            z-index: 15;
+            svg {
+                font-size: 10.4vw;
+            }
+        }
+
+        &--actual {
+            width: 100%;
+            height: min-content;
+            border-radius: 4.4rem;
+            overflow: hidden;
+
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: radial-gradient(circle at center, rgba($primary-foreground-light, .73) 0, $primary-foreground-dark 120%);
+            }
+        }
+        &--caption {
+            width: 100%;
+            display: inline-block;
+            font-size: 2.25rem;
+            padding: 1rem 4rem;
+        }
+        &__wrapper {
+                width: 100%;
+        }
+    }
+    &--cta {
+        background-color: $secondary;
+        background-image: linear-gradient(145deg, $primary 0, $secondary 110%);
+        color: $white;
+        text-align: right;
+        padding: 1.8rem 2.2rem;
+        border-radius: .5rem;
+        width: 80%;
+        margin: 55px 0 0 auto;
+        font-size: 2.813rem;
+    }
+}

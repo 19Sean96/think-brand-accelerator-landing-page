@@ -1,70 +1,195 @@
 .details {
-    width: 100vw;
-    margin-top: -80px;
-    &--intro {
-        position: relative;
-        width: 100%;
-        // background-image: url(/intersection-1.svg);
-        background-size: cover;
+  width: 100vw;
+  margin-top: -80px;
+  &--intro {
+    position: relative;
+    width: 100%;
+    // background-image: url(/intersection-1.svg);
+    background-size: cover;
 
-        &__bg {
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0vw;
+      width: 100vw;
+      z-index: 7;
+    }
+
+    &--heading {
+      grid-column: 6/11;
+      position: relative;
+      z-index: 7;
+      margin-top: 7.25vw;
+    }
+
+    &--title {
+      font-family: "Gotham", sans-serif;
+      font-weight: 600;
+      width: 65%;
+    }
+    &--subtitle {
+      font-family: "Gotham", sans-serif;
+      font-weight: 400;
+    }
+  }
+  &--body {
+    margin-top: 120px;
+    position: relative;
+    grid-column: 1/13;
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      position: relative;
+      width: 45vw;
+      top: 3vw;
+      height: auto;
+      z-index: 11;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--nav {
+      position: relative;
+      height: 49vw;
+      width: 43.12vw;
+      max-width: 675px;
+      max-height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+        font-size: 3.6rem;
+        font-weight: 500;
+        line-height: 1;
+      }
+
+      .nav-item {
+        position: absolute;
+        width: 225px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--btn {
+          position: relative;
+          z-index: 12;
+          width: 175px;
+          height: 175px;
+          border-radius: 50%;
+          border: none;
+          background-image: linear-gradient(
+            145deg,
+            $white-foreground-light,
+            $white-foreground-dark
+          );
+          box-shadow: 21px 21px 42px $white-shadow-dark,
+            -21px -21px 42px $white-shadow-light;
+          img {
             position: absolute;
-            top: 0;
-            left: 0vw;
-            width: 100vw;
-            z-index: 10;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
-
-        &--heading {
-            grid-column: 6/11;
-            position: relative;
-            z-index: 20;
-            margin-top: 10vw;
+        &--name {
+          position: relative;
+          z-index: 13;
+          font-family: eurostile-extended, sans-serif;
+          font-size: 1.9rem;
+          font-weight: bold;
+          color: $secondary;
         }
-
-        &--title {
-            font-family: 'Gotham', sans-serif;
-            font-weight: 600;
-            width: 65%;
-        }
-        &--subtitle {
-            font-family: 'Gotham', sans-serif;
-            font-weight: 400;
-        }
+      }
+      #socialMedia {
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      #web {
+        left: 0;
+        top: 33%;
+        transform: translate(0%, -50%);
+      }
+      #analytics {
+        left: 0%;
+        top: 66%;
+        transform: translate(0%, -50%);
+      }
+      #design {
+        left: 100%;
+        top: 33%;
+        transform: translate(-100%, -50%);
+      }
+      #content {
+        left: 100%;
+        top: 66%;
+        transform: translate(-100%, -50%);
+      }
+      #marketing {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+      }
     }
-    &--body {
-        position: relative;
-        grid-column: 1/13;
 
-
-        &__right {
-            position: relative;
-
-            #molecule1 {
-                position: absolute;
-                z-index: 20;
-                right: 0;
-                transform-origin: center left;
-                transform: translate(75%, -4.5%) scale(1.4) rotate(-1deg);
-            }
-
-            #girlJumping {
-                position: absolute;
-                top: 6vw;
-                right: 10%;
-                z-index: 5;
-                width: 70%;
-                transform-origin: center right;
-
-                &--arm {
-                    position: absolute;
-                    z-index: 21;
-                    width: 70%;
-                    top: 6vw;
-                    right: 10%;
-                    transform-origin: center right;
-                }
-            }
-        }
+    &--cta {
+      margin-top: 125px;
+      width: 100%;
+      text-align: center;
+      a {
+          display: inline-block;
+          width: 60%;
+          padding: 1.75rem 1.1rem;
+          font-size: 2.75rem;
+          font-family: 'Gotham', sans-serif;
+          font-weight: 600;
+        color: $secondary;
+        background-image: linear-gradient(
+          145deg,
+          $white-foreground-light,
+          $white-foreground-dark
+        );
+        box-shadow: 21px 21px 42px $white-shadow-dark,
+        -21px -21px 42px $white-shadow-light;
+      }
     }
+
+    &__right {
+      position: relative;
+
+      #molecule1 {
+        position: absolute;
+        z-index: 8;
+        right: 0;
+        width: 35.4vw;
+        max-width: 700px;
+        transform-origin: center left;
+        transform: translate(0, -15%);
+      }
+
+      #girlJumping {
+        position: absolute;
+        top: 1.4vw;
+        right: 17vw;
+        z-index: 5;
+        width: 50vw;
+        max-width: 1195px;
+        transform-origin: center right;
+
+        &--arm {
+          position: absolute;
+          z-index: 9;
+          width: 50vw;
+          max-width: 1195px;
+          top: 1.4vw;
+          right: 17vw;
+          transform-origin: center right;
+        }
+      }
+    }
+  }
 }

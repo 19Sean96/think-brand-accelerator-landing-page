@@ -1,0 +1,26 @@
+.contact-form {
+    position: relative;
+    z-index: 12;
+    width: 100vw;
+    min-height: 50vh;
+    background-image: linear-gradient(145deg, $primary 0, $secondary 110%);
+    clip-path: polygon(0 0, 100% 22.5%, 100% 100%, 0% 100%);
+
+    &--content {
+        margin-top: 150px;
+        grid-column: 3/11;
+    }
+
+    &--title {
+        font-family: 'Gotham', sans-serif;
+        font-weight: 600;
+        color: $primary;
+        font-size: 4.395rem;
+    }
+    &--subtitle {
+        color: $white;
+        font-size: 3.516rem;
+        font-weight: 500;
+
+    }
+}

@@ -6,8 +6,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: $white;
 }
+body {
+    overflow-x: hidden;
+
+}
 html {
-  overflow-x: hidden;
   font-size: 10px;
 }
 button,a {
