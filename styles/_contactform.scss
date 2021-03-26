@@ -8,9 +8,17 @@
     padding-bottom: 22vw;
     padding-top: 10rem;
 
+
 	&--content {
 		margin-top: 150px;
 		grid-column: 3/11;
+
+		@media screen and (max-width: 1450px) {
+			grid-column: 2/12;
+		}
+		@media screen and (max-width: 1200px) {
+            margin-top: 80px;
+        }
 	}
 
 	&--title {
@@ -33,6 +41,7 @@
         position: relative;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
         max-width: 100%;
 
 		&__wrapper {
@@ -50,8 +59,8 @@
             max-width: 100%;
 		}
 		.full {
-			width: 80%;
-            max-width: 100%;
+			width: 100%;
+			max-width: 100%;
 		}
 
 		&--input {
@@ -71,12 +80,23 @@
 				align-items: flex-start;
 				font-family: "Gotham";
 				font-weight: 700;
-				margin: 32.5px 20px;
-
+				margin: 32.5px 0;
 				label {
 					color: $primary;
 					font-size: 28.14px;
 					margin: 0 0 15px 10px;
+				}
+			}
+
+			@media screen and (max-width: 1025px) {
+				font-size: 18px;
+
+				&__wrapper {
+
+					margin: 22.5px 0;
+					label {
+						font-size: 2.25rem;
+					}
 				}
 			}
 		}
@@ -97,6 +117,10 @@
                 display: flex;
                 justify-content: flex-end;
             }
+
+			@media screen and (max-width: 1025px) {
+				font-size: 2.25rem;
+			}
         }
         #explanation {
             min-width: 99.9%;
@@ -104,5 +128,23 @@
             min-height: 225px;
             max-height: 350px;
         }
+	}
+
+	
+	@media screen and (max-width: 1200px) {
+		clip-path: polygon(0 0, 100% 16rem, 100% 100%, 0 100%);
+
+		&--title {
+			text-align: right;
+			padding-right: 1.8rem;
+			font-size: 3.516rem;
+
+		}
+		&--subtitle {
+			text-align: right;
+			padding-right: 1.8rem;
+            font-size: 2.813rem;
+
+		}
 	}
 }

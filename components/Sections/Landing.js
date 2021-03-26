@@ -29,7 +29,7 @@ const Landing = (props) => {
 									<FontAwesomeIcon icon="chart-bar" />
 								</a>
 							</Link>
-							<Link href="https://www.thinkpro.net/campaigns/previous-campaigns/">
+							{/* <Link href="https://www.thinkpro.net/campaigns/previous-campaigns/">
 								<a
 									className="landing--cta capitalize"
 									id="portfolio"
@@ -37,7 +37,7 @@ const Landing = (props) => {
 									portfolio
 									<FontAwesomeIcon icon="arrow-right" />
 								</a>
-							</Link>
+							</Link> */}
 						</div>
 					</div>
 				</div>
