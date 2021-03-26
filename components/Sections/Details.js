@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ContentWrapper from "../ContentWrapper";
 import Link from "next/link";
 import styled from 'styled-components'
-
+// import LandingIntersection from '../svg-components/LandingIntersection'
 const sixPoints = [
 	{
 		id: "socialMedia",
@@ -55,7 +55,7 @@ const Details = (props) => {
 		<section className="details">
 			<div className="details--intro">
 				<img
-					src="/intersection-1.svg"
+					src="/intersection-1.png"
 					alt="A kid wearing an astronaut helmet looking surprised. He is on a pink background with a galaxy pattern overlay."
 					className="details--intro__bg"
 				/>

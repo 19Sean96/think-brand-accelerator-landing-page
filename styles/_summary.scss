@@ -1,6 +1,6 @@
 .summary {
     position: relative;
-    margin-top: 180px;
+    margin-top: 280px;
 
     &--person {
         position: relative;
@@ -98,6 +98,11 @@
         }
         &__wrapper {
                 width: 100%;
+        }
+        @media screen and (max-width: 1300px) {
+            &--actual {
+                border-radius: 2.2rem;
+            }
         }
         @media screen and (max-width: 1050px) {
             

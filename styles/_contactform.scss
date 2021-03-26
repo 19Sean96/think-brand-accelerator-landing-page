@@ -19,6 +19,9 @@
 		@media screen and (max-width: 1200px) {
             margin-top: 80px;
         }
+		@media screen and (max-width: 900px) {
+			grid-column: 1/13;
+		}
 	}
 
 	&--title {
@@ -52,11 +55,19 @@
 			display: flex;
 			justify-content: space-between;
             max-width: 100%;
+
+			@media screen and (max-width: 900px) {
+				padding: 5rem 4rem 2rem;
+			}
 		}
 
 		.half {
 			width: 45%;
             max-width: 100%;
+
+			@media screen and (max-width: 825px) {
+				width: 75%;
+			}
 		}
 		.full {
 			width: 100%;
@@ -99,6 +110,23 @@
 					}
 				}
 			}
+			@media screen and(max-width: 900px) {
+				&__wrapper {
+					margin: 17.25px;
+				}
+			}
+
+			@media screen and (max-width: 825px) {
+				font-size: 16px;
+
+				&__wrapper {
+					margin: 12.5px;
+
+					label {
+						font-size: 18px;
+					}
+				}
+			}
 		}
 
         &--submit {
@@ -121,12 +149,20 @@
 			@media screen and (max-width: 1025px) {
 				font-size: 2.25rem;
 			}
+			@media screen and (max-width: 825px) {
+				font-size: 18px;
+			}
         }
         #explanation {
             min-width: 99.9%;
             max-width: 100%;
             min-height: 225px;
             max-height: 350px;
+
+			@media screen and (max-width: 825px) {
+				min-height: 100px;
+				max-height: 175px;
+			}
         }
 	}
 
