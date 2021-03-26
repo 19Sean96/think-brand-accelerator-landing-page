@@ -109,6 +109,7 @@ const Details = (props) => {
 						src="/girl-jumping-arm.png"
 						alt=""
 					/>
+					<img src="/girl-jumping-MOBILE.png" alt="Girl Jumping with arm showing over the pink molecule design." id="girlJumpingMobile"/>
 				</div>
 			</div>
 		</section>
@@ -129,6 +130,10 @@ const Description = styled.aside`
     @media screen and (max-width: 1300px) {
         transform: ${props => props.active ? "translate(48vw, 75px)" : "translate(51vw, -15%)"};
     }
+	@media screen and (max-width: 950px) {
+		transform: ${props => props.active ? "translate(0vw, 600px)" : "translate(0vw, -10%)"};
+
+	}
 
 `
 

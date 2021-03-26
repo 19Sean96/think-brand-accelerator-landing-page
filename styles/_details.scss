@@ -72,6 +72,14 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
+			@media screen and (max-width: 950px) {
+				width: 100vw;
+			}
+		}
+		@media screen and (max-width: 950px) {
+			margin-top: 0;
+			flex-direction: column;
 		}
 
 		&--nav {
@@ -138,6 +146,15 @@
 					&--btn {
 						width: 11.3vw;
 						height: 11.3vw;
+						box-shadow: 1.35vw 1.35vw 2.7vw $white-foreground-dark,
+									-1.35vw -1.35vw 2.7vw $white-foreground-light;
+					}
+				}
+				@media screen and (max-width: 950px) {
+					width: 200px;
+
+					&--btn {
+						width: 125px; height: 125px;
 					}
 				}
 			}
@@ -207,8 +224,7 @@
 						line-height: 2.77rem;
 					}
 				}
-				@media screen and (max-width: 1100px) {
-				}
+
 			}
 			#socialMedia {
 				top: 0%;
@@ -250,6 +266,56 @@
 					font-size: 2.9vw;
 				}
 			}
+			@media screen and (max-width: 950px) {
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 100px;
+				height: 46vw;
+
+				h2 {
+					position: absolute;
+					left: 0;
+					top: 0;
+					transform: translate(0, -200%);
+					text-align: left;
+
+					font-size: 3.3rem;
+				}
+				#socialMedia {
+					top: 0%;
+					left: 50%;
+					transform: translate(-50%, 0);
+				}
+				#web {
+					left: 0;
+					top: 0%;
+					transform: translate(0%, 0%);
+				}
+				#analytics {
+					left: 0%;
+					top: 100%;
+					transform: translate(0%, -100%);
+				}
+				#design {
+					left: 100%;
+					top: 0%;
+					transform: translate(-100%, 0%);
+				}
+				#content {
+					left: 100%;
+					top: 100%;
+					transform: translate(-100%, -100%);
+				}
+				#marketing {
+					top: 100%;
+					left: 50%;
+					transform: translate(-50%, -100%);
+				}
+			}
+			@media screen and (max-width: 850px) {
+				height: 390px;
+			}
 		}
 
 		&--cta {
@@ -257,6 +323,7 @@
 			width: 100%;
 			text-align: center;
 			a {
+				border-radius: 5px;
 				display: inline-block;
 				width: 60%;
 				padding: 1.75rem 1.1rem;
@@ -274,15 +341,24 @@
 			}
 
 			@media screen and (max-width: 1000px) {
-				
+				margin-top: 55px;
 				a {
 					font-size: 2.1rem;
+				}
+			}
+
+			@media screen and (max-width: 950px) {
+				width: 50%;
+				a {
+					padding: 2.5rem 3rem;
 				}
 			}
 		}
 
 		&__right {
 			position: relative;
+			margin-top: 200px;
+			width: 100vw;
 
 			#molecule1 {
 				position: absolute;
@@ -324,6 +400,29 @@
 					&--arm {
 						right: 11vw;
 					}
+				}
+			}
+			@media screen and (min-width: 951px) {
+				#girlJumpingMobile {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width: 950px) {
+				overflow-x: hidden;
+				margin-top: 10px;
+				#molecule1 {
+					display: none;
+				}
+				#girlJumping {
+					display: none;
+
+					&--arm {
+						display: none;
+					}
+				}
+				#girlJumpingMobile {
+					width: 100vw;
 				}
 			}
 		}
