@@ -113,7 +113,7 @@ $primary-shadow-dark: #950058;
 
 @font-face {
 	font-family: "Gotham";
-	src: url("/fonts/Gotham-Ultra.otf");
+	src: url("/fonts/Gotham-Black.otf");
 	font-style: normal;
 	font-weight: 800;
 	font-display: swap;
@@ -121,8 +121,24 @@ $primary-shadow-dark: #950058;
 
 @font-face {
 	font-family: "Gotham";
-	src: url("/fonts/Gotham-UltraItalic.otf");
+	src: url("/fonts/Gotham-BlackItalic.otf");
 	font-style: italic;
 	font-weight: 800;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-Ultra.otf");
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("/fonts/Gotham-UltraItalic.otf");
+	font-style: italic;
+	font-weight: 900;
 	font-display: swap;
 }

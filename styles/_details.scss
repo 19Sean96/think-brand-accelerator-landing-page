@@ -119,6 +119,8 @@
 			justify-content: center;
 			align-items: center;
 
+			transform: translateX(2.5vw);
+
 			h2 {
 				text-align: center;
 				font-size: 3.6rem;
@@ -387,6 +389,8 @@
 		}
 
 		&--cta {
+			position: relative;
+			transform: translateX(2.5vw);
 			margin-top: 125px;
 			width: 100%;
 			text-align: center;
