@@ -96,14 +96,14 @@ const GlobalNav = (props) => {
 const LocalNav = (props) => {
 	return (
 		<nav className="nav nav__local">
-			<Link href="/#">
+			<Link href="/#form">
 				<a className="nav--item capitalize filled-bg">
-					free demo 
+					get started
 				</a>
 			</Link>
-			<Link href="#">
+			{/* <Link href="#">
 				<a className="nav--item unfilled-bg">FAQs</a>
-			</Link>
+			</Link> */}
 		</nav>
 	);
 };

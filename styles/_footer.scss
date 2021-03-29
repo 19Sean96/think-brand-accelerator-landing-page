@@ -38,7 +38,8 @@
         color: $primary;
         margin: 12px 48px 24px 0;
         svg {
-            width: 100%;
+            width: 100% !important;
+            height: auto !important;
         }
 
         &__wrapper {

@@ -38,13 +38,12 @@ const ContactForm = ({ sendConfirmationEmail, emailSuccess }) => {
 		watchInputs?.name && validateName(() => watchInputs.name.length > 1);
 	}, [watchInputs]);
 
-
 	useEffect(() => {
 		console.log("THE EMAIL WAS SUCCESSFUL", emailSuccess);
-	}, [emailSuccess])
+	}, [emailSuccess]);
 
 	return (
-		<section className="contact-form">
+		<section className="contact-form" id="form">
 			<ContentWrapper>
 				<div className="contact-form--content">
 					<h3 className="capitalize contact-form--title">
@@ -54,164 +53,159 @@ const ContactForm = ({ sendConfirmationEmail, emailSuccess }) => {
 						get started below
 					</h6>
 					<div className="form__wrapper">
-						<form
-							className="form"
-							onSubmit={handleSubmit(onSubmit)}
-						>
-							{!emailSuccess ? (
-								<>
-									<div className="form--input__wrapper half">
-										<label
-											htmlFor="name"
-											className="capitalize"
-										>
-											your name
-										</label>
-										<input
-											type="text"
-											name="name"
-											ref={register({
-												required: true,
-											})}
-											className="form--input"
-											id="name"
-										/>
-										{errors.name &&
-											errors.name.type === "required" && (
-												<span role="alert">
-													This is required
-												</span>
-											)}
-									</div>
+						{!emailSuccess ? (
+							<form
+								className="form"
+								onSubmit={handleSubmit(onSubmit)}
+							>
+								<div className="form--input__wrapper half">
+									<label
+										htmlFor="name"
+										className="capitalize"
+									>
+										your name
+									</label>
+									<input
+										type="text"
+										name="name"
+										ref={register({
+											required: true,
+										})}
+										className="form--input"
+										id="name"
+									/>
+									{errors.name &&
+										errors.name.type === "required" && (
+											<span role="alert">
+												This is required
+											</span>
+										)}
+								</div>
 
-									<div className="form--input__wrapper half">
-										<label
-											htmlFor="brandName"
-											className="capitalize"
-										>
-											brand name
-										</label>
-										<input
-											type="text"
-											name="brandName"
-											ref={register({
-												required: true,
-											})}
-											className="form--input"
-											id="brandName"
-										/>
-										{errors.brandName &&
-											errors.brandName.type ===
-												"required" && (
-												<span role="alert">
-													This is required
-												</span>
-											)}
-									</div>
+								<div className="form--input__wrapper half">
+									<label
+										htmlFor="brandName"
+										className="capitalize"
+									>
+										brand name
+									</label>
+									<input
+										type="text"
+										name="brandName"
+										ref={register({
+											required: true,
+										})}
+										className="form--input"
+										id="brandName"
+									/>
+									{errors.brandName &&
+										errors.brandName.type ===
+											"required" && (
+											<span role="alert">
+												This is required
+											</span>
+										)}
+								</div>
 
-									<div className="form--input__wrapper half">
-										<label
-											htmlFor="phone"
-											className="capitalize"
-										>
-											phone
-										</label>
-										<Controller
-											control={control}
-											name="phone"
-											defaultValue=""
-											id="phone"
-											ref={register({
-												required: true,
-											})}
-											className="form--input"
-											render={({
-												onChange,
-												onBlur,
-												value,
-												name,
-												id,
-												ref,
-											}) => (
-												<NumberFormat
-													ref={ref}
-													className="form--input"
-													onChange={onChange}
-													onBlur={onBlur}
-													value={value}
-													format="(###) ###-####"
-													placeholder="(123) 456-7890"
-													mask="_"
-													name={name}
-													id={id}
-												/>
-											)}
-										/>
-										{!phoneIsValid &&
-											failedSubmitAttempt && (
-												<span role="alert">
-													Please enter a valid phone
-													number
-												</span>
-											)}
-									</div>
+								<div className="form--input__wrapper half">
+									<label
+										htmlFor="phone"
+										className="capitalize"
+									>
+										phone
+									</label>
+									<Controller
+										control={control}
+										name="phone"
+										defaultValue=""
+										id="phone"
+										ref={register({
+											required: true,
+										})}
+										className="form--input"
+										render={({
+											onChange,
+											onBlur,
+											value,
+											name,
+											id,
+											ref,
+										}) => (
+											<NumberFormat
+												ref={ref}
+												className="form--input"
+												onChange={onChange}
+												onBlur={onBlur}
+												value={value}
+												format="(###) ###-####"
+												placeholder="(123) 456-7890"
+												mask="_"
+												name={name}
+												id={id}
+											/>
+										)}
+									/>
+									{!phoneIsValid && failedSubmitAttempt && (
+										<span role="alert">
+											Please enter a valid phone number
+										</span>
+									)}
+								</div>
 
-									<div className="form--input__wrapper half">
-										<label
-											htmlFor="email"
-											className="capitalize"
-										>
-											email
-										</label>
-										<input
-											type="text"
-											name="email"
-											ref={register({
-												required: true,
-											})}
-											className="form--input"
-											id="email"
-										/>
-										{errors.email &&
-											errors.email.type ===
-												"required" && (
-												<span role="alert">
-													This is required
-												</span>
-											)}
-									</div>
+								<div className="form--input__wrapper half">
+									<label
+										htmlFor="email"
+										className="capitalize"
+									>
+										email
+									</label>
+									<input
+										type="text"
+										name="email"
+										ref={register({
+											required: true,
+										})}
+										className="form--input"
+										id="email"
+									/>
+									{errors.email &&
+										errors.email.type === "required" && (
+											<span role="alert">
+												This is required
+											</span>
+										)}
+								</div>
 
-									<div className="form--input__wrapper full">
-										<label
-											htmlFor="explanation"
-											className="capitalize"
-										>
-											what are you looking to do?
-										</label>
-										<textarea
-											ref={register}
-											name="explanation"
-											id="explanation"
-											cols="30"
-											rows="10"
-											className="form--input"
-										></textarea>
-									</div>
+								<div className="form--input__wrapper full">
+									<label
+										htmlFor="explanation"
+										className="capitalize"
+									>
+										what are you looking to do?
+									</label>
+									<textarea
+										ref={register}
+										name="explanation"
+										id="explanation"
+										cols="30"
+										rows="10"
+										className="form--input"
+									></textarea>
+								</div>
 
-									<div className="form--submit__wrapper full">
-										<button
-											type="submit"
-											className="form--submit uppercase"
-											onClick={handleSubmit(onSubmit)}
-										>
-											submit
-										</button>
-									</div>
-								</>
-							) : (
-								<Success />
-							)}
-						</form>
+								<div className="form--submit__wrapper full">
+									<button
+										type="submit"
+										className="form--submit uppercase"
+										onClick={handleSubmit(onSubmit)}
+									>
+										submit
+									</button>
+								</div>
+							</form>
+						) : (
+							<Success />
+						)}
 					</div>
 				</div>
 			</ContentWrapper>

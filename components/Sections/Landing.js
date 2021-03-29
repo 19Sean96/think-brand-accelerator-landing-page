@@ -25,7 +25,7 @@ const Landing = (props) => {
 									className="landing--cta capitalize"
 									id="freeDemo"
 								>
-									free demo
+									get Started
 									<FontAwesomeIcon icon="chart-bar" />
 								</a>
 							</Link>
