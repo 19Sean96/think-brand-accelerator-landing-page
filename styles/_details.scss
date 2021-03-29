@@ -58,6 +58,7 @@
 			}
 		}
 		@media screen and (max-width: 650px) {
+			overflow-x: hidden;
 			&--heading {
 				grid-column: 6/13;
 			}
