@@ -7,6 +7,13 @@
 	clip-path: polygon(0 0, 100% 22rem, 100% 100%, 0% 100%);
     padding-bottom: 22vw;
     padding-top: 10rem;
+	
+	.success {
+		color: $white;
+		text-align: center;
+		margin: 0 auto;
+		width: 100%;
+	}
 
 
 	&--content {
@@ -187,11 +194,16 @@
 		}
 	}
 	@media screen and (max-width: 950px) {
-		clip-path: polygon(0% 14rem, 100% 0, 100% 100%, 0 100%);
-
+		clip-path: polygon(0% 18rem, 100% 0, 100% 100%, 0 100%);
+		padding-top: 17rem;
+		margin-top: -12rem;
 		&--title {
 			width: 70%;
 			margin-left: auto; margin-right: 0;
+			margin-top: -55px;
+		}
+		&--subtitle {
+			margin-bottom: 75px;
 		}
 	}
 }
