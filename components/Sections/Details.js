@@ -123,7 +123,18 @@ const Details = (props) => {
   );
 };
 
-const NavBtn = styled.div``;
+const NavBtn = styled.div`
+  .nav-item--btn {
+    background-image: ${(props) =>
+      props.active
+        ? "linear-gradient(145deg,#FD0096,#D4007E)"
+        : "linear-gradient(145deg,#F2F2F2,#CBCBCB)"};
+    box-shadow: ${(props) =>
+      props.active
+        ? "21px 21px 42px rgba(149,0,88,.24),-21px -21px 42px rgba(255,0,192,.24)"
+        : "21px 21px 42px #C0C0C0,-21px -21px 42px #FFFFFF"};
+  }
+`;
 
 const Description = styled.aside`
   pointer-events: ${(props) => (props.active ? "all" : "none")} !important;
@@ -168,17 +179,35 @@ function NavItem({ src, name, id, description, activeNav, setActiveNav }) {
           }
         >
           {id === "socialMedia" ? (
-            <Like />
+            <Like
+              gradientStart={activeNav === "socialMedia" ? "#CBCBCB" : "#630460"}
+              gradientEnd={activeNav === "socialMedia" ? "#F2F2F2" : "#EC008C"}
+            />
           ) : id === "web" ? (
-            <Atomic />
+            <Atomic
+              gradientStart={activeNav === "web" ? "#CBCBCB" : "#630460"}
+              gradientEnd={activeNav === "web" ? "#F2F2F2" : "#EC008C"}
+            />
           ) : id === "design" ? (
-            <Brush />
+            <Brush
+              gradientStart={activeNav === "design" ? "#CBCBCB" : "#630460"}
+              gradientEnd={activeNav === "design" ? "#F2F2F2" : "#EC008C"}
+            />
           ) : id === "analytics" ? (
-            <Chart />
+            <Chart
+              gradientStart={activeNav === "analytics" ? "#CBCBCB" : "#630460"}
+              gradientEnd={activeNav === "analytics" ? "#F2F2F2" : "#EC008C"}
+            />
           ) : id === "content" ? (
-            <Camera />
+            <Camera
+              gradientStart={activeNav === "content" ? "#CBCBCB" : "#630460"}
+              gradientEnd={activeNav === "content" ? "#F2F2F2" : "#EC008C"}
+            />
           ) : (
-            <Eye />
+            <Eye
+              gradientStart={activeNav === "marketing" ? "#CBCBCB" : "#630460"}
+              gradientEnd={activeNav === "marketing" ? "#F2F2F2" : "#EC008C"}
+            />
           )}
         </button>
         <p className="nav-item--name">{name}</p>
