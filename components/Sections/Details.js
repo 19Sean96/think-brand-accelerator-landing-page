@@ -61,6 +61,13 @@ const sixPoints = [
 
 const Details = (props) => {
   const [activeNav, setActiveNav] = useState(false);
+  const [screenWidth, setScreenWidth] = useState();
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      setScreenWidth(window.innerWidth);
+    }
+  }, []);
   return (
     <section className="details">
       <div className="details--intro">
@@ -72,8 +79,7 @@ const Details = (props) => {
         <ContentWrapper>
           <div className="details--intro--heading">
             <h2 className="details--intro--title capitalize">
-              Looking to take your brand to new heights? <br />
-              We can help.
+              Looking to take your brand to new heights? We can help.
             </h2>
           </div>
         </ContentWrapper>
@@ -100,7 +106,16 @@ const Details = (props) => {
           </div>
           <div className="details--body--cta">
             <Link href="#">
-              <a className="capitalize getStarted">get started</a>
+              <a
+                className="capitalize getStarted"
+                style={{
+                  opacity: screenWidth <= 950 && activeNav ? 0 : 1,
+                  pointerEvents:
+                    screenWidth <= 950 && activeNav ? "none" : "all",
+                }}
+              >
+                get started
+              </a>
             </Link>
           </div>
         </div>
@@ -134,6 +149,7 @@ const NavBtn = styled.div`
         ? "21px 21px 42px rgba(149,0,88,.24),-21px -21px 42px rgba(255,0,192,.24)"
         : "21px 21px 42px #C0C0C0,-21px -21px 42px #FFFFFF"};
   }
+
 `;
 
 const Description = styled.aside`
@@ -141,20 +157,20 @@ const Description = styled.aside`
   opacity: ${(props) => (props.active ? 1 : 0)} !important;
 
   transform: ${(props) =>
-    props.active ? "translate(47vw, 300px)" : "translate(51vw, -15%)"};
+    props.active ? "translate(47vw, 25px)" : "translate(51vw, -15%)"};
 
   @media screen and (max-width: 1650px) {
     transform: ${(props) =>
-      props.active ? "translate(51vw, 100px)" : "translate(49vw, -15%)"};
+      props.active ? "translate(50vw, 50px)" : "translate(49vw, -15%)"};
   }
 
   @media screen and (max-width: 1300px) {
     transform: ${(props) =>
-      props.active ? "translate(48vw, 75px)" : "translate(51vw, -15%)"};
+      props.active ? "translate(48vw, 75px)" : "translate(41vw, -15%)"};
   }
   @media screen and (max-width: 950px) {
     transform: ${(props) =>
-      props.active ? "translate(0vw, 600px)" : "translate(0vw, -10%)"};
+      props.active ? "translate(0vw, 200px)" : "translate(0vw, -10%)"};
   }
 `;
 
@@ -180,7 +196,9 @@ function NavItem({ src, name, id, description, activeNav, setActiveNav }) {
         >
           {id === "socialMedia" ? (
             <Like
-              gradientStart={activeNav === "socialMedia" ? "#CBCBCB" : "#630460"}
+              gradientStart={
+                activeNav === "socialMedia" ? "#CBCBCB" : "#630460"
+              }
               gradientEnd={activeNav === "socialMedia" ? "#F2F2F2" : "#EC008C"}
             />
           ) : id === "web" ? (

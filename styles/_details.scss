@@ -58,6 +58,7 @@
     }
     @media screen and (max-width: 650px) {
       overflow-x: hidden;
+      height: 325px;
       &--heading {
         grid-column: 6/13;
       }
@@ -73,8 +74,8 @@
         font-size: 1.8rem;
       }
       &__bg {
-        min-width: 710px;
-        left: -6rem;
+        min-width: 800px;
+        left: -12.5rem;
       }
     }
     @media screen and (max-width: 475px) {
@@ -102,7 +103,8 @@
       }
     }
     @media screen and (max-width: 950px) {
-      margin-top: 0;
+      margin-top: 75px;
+      margin-bottom: 175px;
       flex-direction: column;
     }
 
@@ -206,6 +208,9 @@
             font-size: 1.4rem;
           }
         }
+        @media screen and (max-width: 400px) {
+          width: 50px;        
+        }
       }
       .nav-description {
         opacity: 0;
@@ -214,6 +219,7 @@
         top: 0;
         right: 0;
         width: 110%;
+        z-index: 14;
         // background: rgb(99, 4, 96);
         // background: linear-gradient(
         // 	45deg,
@@ -300,8 +306,12 @@
         }
         @media screen and (max-width: 950px) {
           padding: 1.8rem 3.8rem 3.8rem;
+
+          &--close {
+            transform: translateY(-40%) scale(.9);
+          }
           h1 {
-            text-align: center;
+            text-align: left;
           }
           p {
             font-size: 1.7rem;
@@ -417,8 +427,11 @@
       transform: translateX(2.5vw);
       margin-top: 125px;
       width: 100%;
+      z-index: 10;
       text-align: center;
       a {
+        position: relative;
+        z-index: 10;
         border-radius: 5px;
         display: inline-block;
         width: 60%;
@@ -434,6 +447,7 @@
         );
         box-shadow: 21px 21px 42px $white-shadow-dark,
           -21px -21px 42px $white-shadow-light;
+        transition: opacity .3s ease-in-out;
       }
 
       @media screen and (max-width: 1000px) {
@@ -510,6 +524,10 @@
       @media screen and (max-width: 950px) {
         overflow-x: hidden;
         margin-top: 10px;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        // transform: translate(55%,-25%);
         #molecule1 {
           display: none;
         }
@@ -521,6 +539,7 @@
           }
         }
         #girlJumpingMobile {
+          opacity: 0;
           width: 100vw;
         }
       }

@@ -57,12 +57,14 @@
         font-size: 18px;
       }
     }
-    @media screen and (max-width: 625px) {
+    @media screen and (max-width: 650px) {
       &--title {
-        font-size: 28.13px;
+        text-align: center;
+        margin: 0 auto;
       }
       &--subtitle {
-        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
       }
     }
     @media screen and (max-width: 425px) {
@@ -147,6 +149,11 @@
         flex-direction: column;
       }
     }
+    @media screen and (max-width: 650px) {
+      &__container {
+        align-items: center;
+      }
+    }
     @media screen and (max-width: 425px) {
       font-size: 14.4px;
 
@@ -183,6 +190,11 @@
     @media screen and (max-width: 850px) {
       min-width: 550px;
       transform: translate(-12.5%, 0%);
+    }
+    @media screen and (max-width: 650px) {
+      min-width: 350px;
+      right: 50%;
+      transform: translate(50%, 80px);
     }
   }
 

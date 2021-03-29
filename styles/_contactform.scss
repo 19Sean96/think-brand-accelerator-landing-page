@@ -4,7 +4,7 @@
 	width: 100vw;
 	min-height: 50vh;
 	background-image: linear-gradient(5deg, $primary 0, $secondary 96%);
-	clip-path: polygon(0 0, 100% 22rem, 100% 100%, 0% 100%);
+	clip-path: polygon(0 22rem, 100% 0, 100% 100%, 0% 100%);
     padding-bottom: 22vw;
     padding-top: 10rem;
 	
@@ -68,6 +68,9 @@
 				display: flex;
 				flex-direction: column;
 				align-items: flex-end;
+			}
+			@media screen and (max-width: 600px) {
+				padding: 4rem .5rem 1rem;
 			}
 		}
 
@@ -178,7 +181,8 @@
 
 	
 	@media screen and (max-width: 1200px) {
-		clip-path: polygon(0 0, 100% 16rem, 100% 100%, 0 100%);
+		// clip-path: polygon(0 0, 100% 16rem, 100% 100%, 0 100%);
+		clip-path: polygon(0 16rem, 100% 0, 100% 100%, 0% 100%);
 
 		&--title {
 			text-align: right;
@@ -194,7 +198,7 @@
 		}
 	}
 	@media screen and (max-width: 950px) {
-		clip-path: polygon(0% 18rem, 100% 0, 100% 100%, 0 100%);
+		clip-path: polygon(0% 11rem, 100% 0, 100% 100%, 0 100%);
 		padding-top: 17rem;
 		margin-top: -12rem;
 		&--title {
@@ -205,5 +209,9 @@
 		&--subtitle {
 			margin-bottom: 75px;
 		}
+	}
+	@media screen and (max-width: 600px) {
+		clip-path: polygon(0 7rem, 100% 0, 100% 100%, 0% 100%);
+
 	}
 }
