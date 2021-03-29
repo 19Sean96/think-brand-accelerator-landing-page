@@ -61,7 +61,7 @@ export default function Home() {
 				<Header />
 				<Landing />
 				<Details />
-				<Summary />
+				{/* <Summary /> */}
 				<ContactForm sendConfirmationEmail={sendConfirmationEmail} emailSuccess={emailSuccess}/>
 				<Footer />
 			</main>
