@@ -1,212 +1,247 @@
 .landing {
-  min-height: 750px;
-  max-height: 88vh;
-  height: 55vw;
-  position: relative;
-  &--statement {
-    position: relative;
-    z-index: 8;
-    margin-top: 15vh;
-    grid-column: 2/6;
-    height: 25vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    &--title {
-      font-weight: 800;
-      font-family: "Gotham", serif;
-      margin-bottom: 0;
-      color: $black;
-      line-height: 1.1;
-    }
-    &--subtitle {
-      font-family: "Gotham";
-      margin: 15px 0 45px;
-      color: $secondary;
-      font-weight: 600;
-      font-size: 2.25rem;
-    }
-    @media screen and (max-width: 1625px) {
-      margin-top: 8vh;
-    }
+	min-height: 750px;
+	max-height: 88vh;
+	height: 55vw;
+	position: relative;
+	&--statement {
+		position: relative;
+		z-index: 8;
+		margin-top: 15vh;
+		grid-column: 2/6;
+		height: 25vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&--title {
+			font-weight: 800;
+			font-family: "Gotham", serif;
+			margin-bottom: 0;
+			color: $black;
+			line-height: 1.1;
+		}
+		&--subtitle {
+			font-family: "Gotham";
+			margin: 15px 0 45px;
+			color: $secondary;
+			font-weight: 600;
+			font-size: 2.25rem;
+		}
+		@media screen and (max-width: 1625px) {
+			margin-top: 8vh;
+		}
 
-    @media screen and (max-width: 1325px) {
-      margin-top: 1vh;
-      grid-column: 2/9;
-      height: 27vh;
+		@media screen and (max-width: 1325px) {
+			margin-top: 1vh;
+			grid-column: 2/9;
+			height: 27vh;
 
-      &--title {
-          width: 70%;
-      }
-      &--subtitle {
-          width: 90%;
-      }
-    }
+			&--title {
+				width: 70%;
+			}
+			&--subtitle {
+				width: 90%;
+			}
+		}
 
-    @media screen and (max-width: 850px) {
-      margin-top: 1.2vh;
-      height: 27vh;
-      text-align: left;
-      grid-column: 2/12;
-      &--title {
-        font-size: 28.13px;
-      }
+		@media screen and (max-width: 850px) {
+			margin-top: 1.2vh;
+			height: 27vh;
+			text-align: left;
+			grid-column: 2/12;
+			&--title {
+				font-size: 28.13px;
+			}
 
-      &--subtitle {
-        width: 80%;
-        font-size: 18px;
-      }
-    }
-    @media screen and (max-width: 650px) {
-      &--title {
-        text-align: center;
-        margin: 0 auto;
-      }
-      &--subtitle {
-        text-align: center;
-        margin: 0 auto;
-      }
-    }
-    @media screen and (max-width: 425px) {
-      &--title {
-        font-size: 22.5px;
-      }
-      &--subtitle {
-        font-size: 14.4px;
-      }
-    }
-  }
+			&--subtitle {
+				width: 80%;
+				font-size: 18px;
+			}
+		}
+		@media screen and (max-width: 650px) {
+			&--title {
+				text-align: center;
+				margin: 0 auto;
+			}
+			&--subtitle {
+				text-align: center;
+				margin: 0 auto;
+			}
+		}
+		@media screen and (max-width: 425px) {
+			&--title {
+				font-size: 22.5px;
+			}
+			&--subtitle {
+				font-size: 14.4px;
+			}
+		}
+	}
 
-  &--cta {
-    padding: 14px 55px;
-    margin: 11px 22px 11px 0;
-    border-radius: 4px;
-    text-align: center;
-    font-family: "Gotham";
-    font-weight: 500;
-    font-size: 2.25rem;
+	&--cta {
+		padding: 14px 55px;
+		margin: 11px 22px 11px 0;
+		border-radius: 4px;
+		text-align: center;
+		font-family: "Gotham";
+		font-weight: 500;
+		font-size: 2.25rem;
 
-    &__container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      #freeDemo {
-        background-color: $secondary;
-        background-image: linear-gradient(52.95deg, #ec008c 0%, #630460 100%);
-        color: $white;
-      }
-
-      #portfolio {
-        position: relative;
-        color: $secondary;
-        background-color: transparent;
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          width: calc(100% - 8px);
-          height: calc(100% - 8px);
-          background-color: $white;
-          transform: translate(-50%, -50%);
-          z-index: -1;
-          border-radius: 1px;
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          width: 100%;
-          height: 100%;
-          background-color: $secondary;
-          background-image: linear-gradient(52.95deg, #ec008c 0%, #630460 100%);
-          transform: translate(-50%, -50%);
-          z-index: -2;
-          border-radius: 4px;
-        }
-      }
-    }
-
-    svg {
-      height: 21.5px;
-      margin: 0 0 0px 6px;
-    }
-
-    @media screen and (max-width: 850px) {
-      font-size: 1.8rem;
-      &__container {
-        justify-content: center;
-      }
-
-      svg {
-        height: 1.85rem;
-      }
-    }
-    @media screen and (max-width: 775px) {
-      &__container {
-        flex-direction: column;
-      }
-    }
-    @media screen and (max-width: 650px) {
-      &__container {
-        align-items: center;
-      }
-    }
-    @media screen and (max-width: 425px) {
-      font-size: 14.4px;
-
-      svg {
-        height: 17.5px;
-      }
-    }
-  }
-
-  &--image {
-    position: absolute;
-    top: 5%;
-    right: 50%;
-    width: 40vw;
-    min-width: 750px;
-    transform: translate(75%, -15%);
-    z-index: 1;
-    img {
-      width: 100%;
-    }
-
-    @media screen and (max-width: 1325px) {
-        min-width: 650px;
-        top:20%;
-        right: 0%;
-        transform: translate(0%, -15%);
+		&__container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			#freeDemo {
+				background-color: transparent;
+				// background-image: linear-gradient(
+				// 	52.95deg,
+        //   #fff -100%,
+				// 	#ec008c 0%,
+				// 	#630460 100%
+				// );
+				color: $white;
         overflow: hidden;
-        img {
-            position: relative;
-            transform: translate(10%, 0);
+        position: relative;
+        transition: .2s all ease-out;
+        &::before {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 200%;
+          transform: translate(-50%, 0);
+          background-image: linear-gradient(
+            52.95deg,
+            $white 0%,
+            $primary 60%,
+            $secondary 100%
+          );      
+          transition: .24s all ease-in-out;  
         }
-    }
+        &:hover {
+          color: $secondary;
+          &::before {
+            transform: translate(-15%,0);
+          }
+        }
+			}
 
-    @media screen and (max-width: 850px) {
-      min-width: 550px;
-      transform: translate(-12.5%, 0%);
-    }
-    @media screen and (max-width: 650px) {
-      min-width: 350px;
-      right: 50%;
-      transform: translate(50%, 80px);
-    }
-  }
+			#portfolio {
+				position: relative;
+				color: $secondary;
+				background-color: transparent;
 
-  @media screen and (max-height: 1000px) {
-    min-height: 800px;
-  }
+				&::after {
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					width: calc(100% - 8px);
+					height: calc(100% - 8px);
+					background-color: $white;
+					transform: translate(-50%, -50%);
+					z-index: -1;
+					border-radius: 1px;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					width: 100%;
+					height: 100%;
+					background-color: $secondary;
+					background-image: linear-gradient(
+						52.95deg,
+						#ec008c 0%,
+						#630460 100%
+					);
+					transform: translate(-50%, -50%);
+					z-index: -2;
+					border-radius: 4px;
+				}
+			}
+		}
 
-  @media screen and (max-height: 900px) and (max-width: 650px) {
-    min-height: 600px;
+		svg {
+			height: 21.5px;
+			margin: 0 0 0px 6px;
+		}
 
-    &--statement {
-      grid-column: 1/13;
-    }
-  }
+		@media screen and (max-width: 850px) {
+			font-size: 1.8rem;
+			&__container {
+				justify-content: center;
+			}
+
+			svg {
+				height: 1.85rem;
+			}
+		}
+		@media screen and (max-width: 775px) {
+			&__container {
+				flex-direction: column;
+			}
+		}
+		@media screen and (max-width: 650px) {
+			&__container {
+				align-items: center;
+			}
+		}
+		@media screen and (max-width: 425px) {
+			font-size: 14.4px;
+
+			svg {
+				height: 17.5px;
+			}
+		}
+	}
+
+	&--image {
+		position: absolute;
+		top: 5%;
+		right: 50%;
+		width: 40vw;
+		min-width: 750px;
+		transform: translate(75%, -15%);
+		z-index: 1;
+		img {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 1325px) {
+			min-width: 650px;
+			top: 20%;
+			right: 0%;
+			transform: translate(0%, -15%);
+			overflow: hidden;
+			img {
+				position: relative;
+				transform: translate(10%, 0);
+			}
+		}
+
+		@media screen and (max-width: 850px) {
+			min-width: 550px;
+			transform: translate(-12.5%, 0%);
+		}
+		@media screen and (max-width: 650px) {
+			min-width: 350px;
+			right: 50%;
+			transform: translate(50%, 80px);
+		}
+	}
+
+	@media screen and (max-height: 1000px) {
+		min-height: 800px;
+	}
+
+	@media screen and (max-height: 900px) and (max-width: 650px) {
+		min-height: 600px;
+
+		&--statement {
+			grid-column: 1/13;
+		}
+	}
 }

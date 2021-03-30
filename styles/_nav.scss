@@ -1,109 +1,220 @@
 .nav {
 	&__local {
-
 		.nav--item {
 			padding: 11px 58.4px;
 			margin-left: 40px;
 			font-size: 16px;
-            z-index: 10;
+			z-index: 10;
 			svg {
 				height: 21.5px;
 				margin: 0 0 -4px 4px;
 			}
 
 			&.filled-bg {
-				background-color: $secondary;
-                background-image: linear-gradient(75.15deg, #ec008c 0%, #630460 100%);
+				background-color: transparent;
+				// background-image: linear-gradient(
+				// 	75.15deg,
+				// 	#ec008c 0%,
+				// 	#630460 100%
+				// );
+                display: inline-block;
 				color: $white;
 				border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+                transition: .2s all ease-out;
+                &::before {
+                  content: '';
+                  position: absolute;
+                  z-index: -1;
+                  left: 0;
+                  top: 0;
+                  height: 100%;
+                  width: 200%;
+                  transform: translate(-50%, 0);
+                  background-image: linear-gradient(
+                    52.95deg,
+                    $white 0%,
+                    $primary 60%,
+                    $secondary 100%
+                  );      
+                  transition: .24s all ease-in-out;  
+                }
+                &:hover {
+                  color: $secondary;
+                  &::before {
+                    transform: translate(-15%,0);
+                  }
+                }
 			}
 			&.unfilled-bg {
 				color: $secondary;
-                font-weight: 700;
+				font-weight: 700;
 			}
 		}
+
 	}
-    &__global {
-        position: relative;
-        z-index: 500;
-        &--open {
-            margin-top: 1.5rem;
-            margin-left: 3rem;
+	&__global {
+		position: relative;
+		z-index: 500;
+		&--open {
+			margin-top: 1.5rem;
+			margin-left: 3rem;
 
-            button {
-                font-family: 'Gotham', sans-serif;
-                font-weight: 500;
-                font-size: 2.25rem;
-                background-color: transparent;
-                border: none;
-            }
-        }
-        &--display {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            pointer-events: none;
-            // opacity: 0;
-            transition: .15s all ease-in .2s;
+			button {
+				font-family: "Gotham", sans-serif;
+				font-weight: 500;
+				font-size: 2.25rem;
+				background-color: transparent;
+				border: none;
+			}
+		}
+		&--display {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			pointer-events: none;
+			// opacity: 0;
+			transition: 0.15s all ease-in 0.2s;
+		}
+		.inView {
+			pointer-events: all;
+			// opacity: 1;
 
+			ul {
+				transition: opacity 0.28s ease-in-out 0.14s;
+			}
+		}
+		&--list {
+			text-align: center;
+			position: relative;
+			z-index: 1000;
+            padding-left: 0;
+			transition: opacity 0.14s ease-in-out;
 
-        }
-        .inView {
-            pointer-events: all;
-            // opacity: 1;
+			li {
+				list-style: none;
+				font-size: 4.9rem;
+				padding: 1.25rem 0;
 
-            ul {
-                transition: opacity .28s ease-in-out .14s;
-
-            }
-
-        }
-        &--list {
-            text-align: center;
-            position: relative;
-            z-index: 1000;
-
-            transition: opacity .14s ease-in-out;
-
-            li {
-                list-style: none;
-                font-size: 4.9rem;
-                padding: 1.25rem 0;
-                color: $primary;
-            }
-        }
-        #navGlobalClose {
-            display: none;
-            position: absolute;
-            top: 10%; right: 10%;
-            font-size: 7rem;
-            cursor: pointer;
-            color: $white;
-            z-index: 1200;
-            padding: 1rem;
-            background-color: transparent;
-            border: none;
-        }
-    }
+				a {
+					position: relative;
+                    padding-bottom: 5px;
+                    color: $primary;
+                    transition: .17s color ease-out;
+					&::after {
+						content: "";
+						position: absolute;
+						left: 50%;
+						bottom: 0;
+						height: 1px;
+						width: 0;
+						transition: 0.22s all ease-in;
+						background-color: $primary;
+					}
+					&::before {
+						content: "";
+						position: absolute;
+						right: 50%;
+						bottom: 0;
+						height: 1px;
+						width: 0;
+						transition: 0.22s all ease-in;
+						background-color: $primary;
+					}
+					&:hover {
+                        color: $white;
+						&::before,
+						&::after {
+							width: 55%;
+						}
+					}
+				}
+			}
+		}
+		#navGlobalClose {
+			display: none;
+			position: absolute;
+			top: 10%;
+			right: 10%;
+			font-size: 7rem;
+			cursor: pointer;
+			color: $white;
+			z-index: 1200;
+			padding: 1rem;
+			background-color: transparent;
+			border: none;
+		}
+	}
 
 	@media screen and (max-width: 1000px) {
 		display: flex;
 		flex-direction: column;
-        align-items: flex-end;
+		align-items: flex-end;
 
-        &__local {
-
-            .nav--item {
-                padding: 13px 44px;
+		&__local {
+			.nav--item {
+				padding: 13px 44px;
+			}
+		}
+        &__global {
+            &--list {
+                li {
+                    font-size: 3.9rem;
+                }
             }
         }
 	}
-    @media screen and (max-width: 675px) {
-		display: none;
-	}
+    @media screen and (max-width: 750px) {
+        &__local {
+            display: none;
+        }
+        &__global {
+            &--list {
+                li {
+                    font-size: 3.25rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 500px) {
+        &__global {
+            &--open {
+                margin-top: 1.5rem;
+                margin-left: 1rem;
+    
+                button {
+                    font-family: "Gotham", sans-serif;
+                    font-weight: 500;
+                    font-size: 1.8rem;
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+            &--list {
+                li {
+                    font-size: 2.5rem;
+                }
+            }
+
+            #navGlobalClose {
+                display: none;
+                position: absolute;
+                top: 10%;
+                right: 10%;
+                font-size: 5rem;
+                cursor: pointer;
+                color: $white;
+                z-index: 1200;
+                padding: 1rem;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
 }

@@ -16,9 +16,7 @@ const Landing = (props) => {
 						</h5>
 					</div>
 					<div className="landing--statement__bottom">
-						{/* <h5 className="landing--catch capitalize">
-							THINK CAMPAIGNS offer you a risk-free way to earn extra revenue and brand awareness by helping you launch a t-shirt campaign. It's easy and there's no cost to you!
-						</h5> */}
+
 						<div className="landing--cta__container">
 							<Link href="/#form">
 								<a
@@ -29,15 +27,7 @@ const Landing = (props) => {
 									<FontAwesomeIcon icon="chart-bar" />
 								</a>
 							</Link>
-							{/* <Link href="https://www.thinkpro.net/campaigns/previous-campaigns/">
-								<a
-									className="landing--cta capitalize"
-									id="portfolio"
-								>
-									portfolio
-									<FontAwesomeIcon icon="arrow-right" />
-								</a>
-							</Link> */}
+
 						</div>
 					</div>
 				</div>
