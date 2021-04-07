@@ -108,6 +108,14 @@
       flex-direction: column;
     }
 
+    @media screen and (min-width: 1900px) {
+      margin-top: 18vw;
+    }
+
+    @media screen and (min-width: 2850px) {
+      margin-top: 22vw;
+    }
+
     &--nav {
       // margin-top: 150px;
       position: relative;

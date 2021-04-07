@@ -83,7 +83,6 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-yarn 
       <main>
         <Header />
         <Landing />
