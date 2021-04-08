@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Sections/Header";
 import Landing from "../components/Sections/Landing";
+import Steps from '../components/Sections/Steps';
 import Details from "../components/Sections/Details";
 import Summary from "../components/Sections/Summary";
 import ContactForm from "../components/Sections/ContactForm";
@@ -86,8 +87,9 @@ export default function Home() {
       <main>
         <Header />
         <Landing />
+        <Steps />
         <Details />
-        <Summary />
+        {/* <Summary /> */}
         <ContactForm
           sendConfirmationEmail={sendConfirmationEmail}
           emailSuccess={emailSuccess}

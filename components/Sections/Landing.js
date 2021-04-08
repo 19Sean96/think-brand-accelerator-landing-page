@@ -8,9 +8,9 @@ const Landing = (props) => {
 			<ContentWrapper>
 				<div className="landing--statement">
 					<div className="landing--statement__top">
-						<h2 className="landing--statement--title uppercase">
+						<h1 className="landing--statement--title uppercase">
                         The Place To Go For Brands To Grow.
-						</h2>
+						</h1>
 						<h5 className="landing--statement--subtitle capitalize">
                         A Program for select businesses to have the opportunity to work with a design/marketing dream team to help get your vision off the ground.
 						</h5>
