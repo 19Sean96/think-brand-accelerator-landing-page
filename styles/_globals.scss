@@ -50,22 +50,30 @@ a {
 }
 
 h1 {
-  font-family: eurostile-extended,sans-serif;
-  font-weight: 400;
+  font-weight: 800;
+  font-family: "Gotham", serif;
+  text-transform: uppercase;
   font-style: normal;
-  font-size: 68.66px;
+  font-size: 54.9px;
+  line-height: 1.1;
 
   @media screen and (max-width: 1650px) {
-    font-size: 54.9px;
+    font-size: 43.95px;
   }
   @media screen and (max-width: 1000px) {
-    font-size: 43.95px
+    font-size: 35.16px
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 28.13px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 22.5px;
   }
 }
 
 h2 {
-  font-family: eurostile-extended,sans-serif;
-  font-weight: 400;
+  font-family: "Gotham", sans-serif;
+  font-weight: 600;
   font-style: normal;
   font-size: 54.9px;
 
@@ -78,10 +86,11 @@ h2 {
 }
 
 h3 {
-  font-family: eurostile-extended,sans-serif;
-  font-weight: 400;
+  font-family: "Gotham", sans-serif;
+  font-weight: 600;
   font-style: normal;
   font-size: 43.95px;
+  text-transform: capitalize;
 
   @media screen and (max-width: 1650px) {
     font-size: 35.16px;
@@ -93,10 +102,10 @@ h3 {
 
 h4 {
   font-family: 'Gotham', serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-size: 35.16px;
-
+  text-transform: capitalize;
   @media screen and (max-width: 1650px) {
     font-size: 28.13px;
   }
@@ -107,7 +116,7 @@ h4 {
 
 h5 {
   font-family: 'Gotham', serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-size: 28.13px;
 
@@ -116,6 +125,9 @@ h5 {
   }
   @media screen and (max-width: 1000px) {
     font-size: 18px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 14.4px;
   }
 }
 
@@ -130,5 +142,5 @@ p {
   font-family: 'Gotham', serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
+  font-size: clamp(13px, 1.9vw, 18px);
 }
