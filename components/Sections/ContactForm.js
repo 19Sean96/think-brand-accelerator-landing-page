@@ -208,6 +208,13 @@ const ContactForm = ({ sendConfirmationEmail, emailSuccess }) => {
 						)}
 					</div>
 				</div>
+				<div className="img__wrapper">
+					<img
+						src="/guy-listening-to-music-min.png"
+						alt="Guy listening to music"
+						class="img"
+					/>
+				</div>
 			</ContentWrapper>
 		</section>
 	);

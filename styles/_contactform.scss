@@ -4,10 +4,10 @@
 	width: 100vw;
 	min-height: 50vh;
 	background-image: linear-gradient(5deg, $primary 0, $secondary 96%);
-	clip-path: polygon(0 22rem, 100% 0, 100% 100%, 0% 100%);
+	// clip-path: polygon(0 22rem, 100% 0, 100% 100%, 0% 100%);
     padding-bottom: 22vw;
-    padding-top: 10rem;
-	
+    padding-top: 0rem;
+	margin-top: 15vw;
 	.success {
 		color: $white;
 		text-align: center;
@@ -16,12 +16,32 @@
 	}
 
 
+	.img {
+		height:auto;
+		width: 100%;
+		position: relative;
+		z-index: 50;
+		&__wrapper {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50vw;
+			max-width: 1000px;
+			min-width: 600px;
+			height: auto;
+			transform: translate(-10%, -15%);
+			z-index: 50;
+		}
+	}
 	&--content {
 		margin-top: 150px;
-		grid-column: 3/11;
+		grid-column: 6/13;
+		position: relative;
+
+
 
 		@media screen and (max-width: 1450px) {
-			grid-column: 2/12;
+			grid-column: 5/13;
 		}
 		@media screen and (max-width: 1200px) {
             margin-top: 80px;
@@ -55,7 +75,7 @@
 			background-color: $black;
 			background-image: linear-gradient(-35deg, #292929, #313131);
 			border-radius: 3rem;
-			padding: 7.5rem 5rem 2.5rem;
+			padding: 2.5rem 3rem 2.5rem;
 			display: flex;
 			justify-content: space-between;
             max-width: 100%;
@@ -85,7 +105,7 @@
 		}
 
 		&--input {
-			font-size: 22.5px;
+			font-size: 18px;
 			padding: 20px 40px;
 			border-radius: 20px;
 			box-shadow: 0 -14px 26px rgba(0, 0, 0, 0.11);
@@ -101,25 +121,14 @@
 				align-items: flex-start;
 				font-family: "Gotham";
 				font-weight: 700;
-				margin: 32.5px 0;
+				margin: 22.5px 0;
 				label {
 					color: $primary;
-					font-size: 28.14px;
-					margin: 0 0 15px 10px;
+					font-size: 22px;
+					margin: 0 0 5px 10px;
 				}
 			}
 
-			@media screen and (max-width: 1025px) {
-				font-size: 18px;
-
-				&__wrapper {
-
-					margin: 22.5px 0;
-					label {
-						font-size: 2.25rem;
-					}
-				}
-			}
 			@media screen and(max-width: 900px) {
 				&__wrapper {
 					margin: 17.25px;
@@ -140,7 +149,7 @@
 		}
 
         &--submit {
-            font-size: 2.813rem;
+            font-size: 22px;
             font-family: 'Gotham';
             font-weight: 500;
             border-radius: 7px;
@@ -179,7 +188,7 @@
 	
 	@media screen and (max-width: 1200px) {
 		// clip-path: polygon(0 0, 100% 16rem, 100% 100%, 0 100%);
-		clip-path: polygon(0 16rem, 100% 0, 100% 100%, 0% 100%);
+		// clip-path: polygon(0 16rem, 100% 0, 100% 100%, 0% 100%);
 
 		&--title {
 			text-align: right;
@@ -195,7 +204,7 @@
 		}
 	}
 	@media screen and (max-width: 950px) {
-		clip-path: polygon(0% 11rem, 100% 0, 100% 100%, 0 100%);
+		// clip-path: polygon(0% 11rem, 100% 0, 100% 100%, 0 100%);
 		padding-top: 17rem;
 		margin-top: -12rem;
 		&--title {
@@ -208,7 +217,7 @@
 		}
 	}
 	@media screen and (max-width: 600px) {
-		clip-path: polygon(0 7rem, 100% 0, 100% 100%, 0% 100%);
+		// clip-path: polygon(0 7rem, 100% 0, 100% 100%, 0% 100%);
 
 	}
 }
