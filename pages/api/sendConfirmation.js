@@ -21,7 +21,7 @@ export default async (req, res) => {
 		},
 	});
     const to = [
-        // "webninja@thinkpro.net",
+        "webninja@thinkpro.net",
         "1996.sean.alexander@gmail.com"
     ]
 
