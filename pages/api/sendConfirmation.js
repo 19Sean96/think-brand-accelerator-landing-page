@@ -22,13 +22,13 @@ export default async (req, res) => {
 	});
     const to = [
         "webninja@thinkpro.net",
-        "1996.sean.alexander@gmail.com"
+        "tommy@thinkpro.net"
     ]
 
 	let info = {
 			from: EMAIL_NAME,
 			to: to,
-            // cc: 'randy@thinkpro.net',
+            cc: 'randy@thinkpro.net',
 			subject: "NEW BRAND ACCELERATOR REQUEST (2.0)", // Subject line
 			// text: "Hello world?", // plain text body
 			html: `<div>
